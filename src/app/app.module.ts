@@ -6,6 +6,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
 import {AppRoutingModule} from "./modules/app-routing/app-routing.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppMatModule} from "./modules/app-mat/app-mat.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {AppRoutingModule} from "./modules/app-routing/app-routing.module";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppMatModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
