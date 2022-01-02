@@ -1,0 +1,9 @@
+mat-grid-tile  {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-item {
+  font-weight: bold;
+}

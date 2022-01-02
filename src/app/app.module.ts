@@ -8,13 +8,15 @@ import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.compon
 import {AppRoutingModule} from "./modules/app-routing/app-routing.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppMatModule} from "./modules/app-mat/app-mat.module";
+import { MenuItemComponent } from './childs/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ContactPageComponent,
-    AboutUsPageComponent
+    AboutUsPageComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,

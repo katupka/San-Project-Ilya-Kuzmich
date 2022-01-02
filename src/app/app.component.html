@@ -14,7 +14,17 @@
 </mat-toolbar>
 
 <mat-drawer-container class="container" hasBackdrop="true">
-  <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
+  <mat-drawer #drawer mode="over">
+    <div style="width: 250px;">
+
+      <div style="padding-left: 10px; padding-top: 10px;">
+        <app-menu-item setIcon="home" setTitle="Home" routerLink="/" (click)="drawer.close()"></app-menu-item>
+        <app-menu-item setIcon="phone" setTitle="Contact" routerLink="/contact" (click)="drawer.close()"></app-menu-item>
+        <app-menu-item setIcon="person" setTitle="About Us" routerLink="/about-us" (click)="drawer.close()"></app-menu-item>
+      </div>
+
+    </div>
+  </mat-drawer>
   <mat-drawer-content>
 
     <router-outlet></router-outlet>
