@@ -10,6 +10,6 @@ export class HostAddressService {
   }
 
   getHostAddress(): string {
-    return environment.production ? '' : 'https://localhost:3000/';
+    return 'https://api.openweathermap.org/';
   }
 }

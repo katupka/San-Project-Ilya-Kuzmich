@@ -17,13 +17,8 @@ export class RestService {
   }
 
   getWeather(city: String): Observable<WeatherResponse> {
-    const headers = new HttpHeaders();
-    headers.append('Access-Control-Allow-Origin', '*');
-    headers.append('Content-Type', '*');
-    headers.append('Access-Control-Allow-Methods', '*');
-
-
-    return this.http.get('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=6890862a72fc7aabfe2222f2f2b1d4b0&lang=pl&units=metric', {
+    const headers = this.httpHeaders.headers
+    return this.http.get(this.hostAddress.getHostAddress() + 'data/2.5/weather?q=' + city + '&appid=6890862a72fc7aabfe2222f2f2b1d4b0&lang=pl&units=metric', {
       headers
     }).pipe(
       map((data) => {
