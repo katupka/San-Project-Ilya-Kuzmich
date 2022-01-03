@@ -14,4 +14,8 @@ export class Weather {
      this.description = description;
      this.icon = icon;
    }
+
+   getIcon(): string {
+     return this.icon ? "http://openweathermap.org/img/w/" + this.icon + ".png" : ""
+   }
 }

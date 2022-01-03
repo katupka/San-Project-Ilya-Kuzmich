@@ -25,6 +25,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatMenuModule} from "@angular/material/menu";
 import {FormsModule} from "@angular/forms";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import {FormsModule} from "@angular/forms";
     MatToolbarModule,
     MatSidenavModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule
   ]
 })
 export class AppMatModule {

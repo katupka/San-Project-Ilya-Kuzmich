@@ -34,4 +34,8 @@ export class WeatherResponse {
     this.name = object.name;
     this.cod = object.cod;
   }
+
+  get currentWeather(): Weather {
+    return this.weather[0]
+  }
 }

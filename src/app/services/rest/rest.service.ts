@@ -23,11 +23,10 @@ export class RestService {
     headers.append('Access-Control-Allow-Methods', '*');
 
 
-    return this.http.get('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=6890862a72fc7aabfe2222f2f2b1d4b0&lang=pl', {
+    return this.http.get('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=6890862a72fc7aabfe2222f2f2b1d4b0&lang=pl&units=metric', {
       headers
     }).pipe(
       map((data) => {
-        console.log(data);
         return new WeatherResponse(data);
       }));
   }
