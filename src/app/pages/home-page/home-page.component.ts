@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RestService} from "../../services/rest/rest.service";
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rest: RestService) { }
 
   ngOnInit(): void {
+    this.rest.getWeather('Brest').subscribe(weather => {
+      console.log('jkrdjkjgrkjkdgjk')
+      console.log(weather)
+    })
   }
 
 }
