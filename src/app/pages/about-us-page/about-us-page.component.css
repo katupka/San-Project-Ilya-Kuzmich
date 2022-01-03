@@ -1,0 +1,52 @@
+.about-text h3 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.about-text h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 18px;
+}
+
+.about-text .btn-bar {
+  padding-top: 8px;
+}
+.about-text .btn-bar a {
+  min-width: 150px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.about-list {
+  padding-top: 10px;
+}
+.about-list .media {
+  padding: 5px 0;
+}
+
+.about-list p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.counter-section {
+  padding: 40px 20px;
+}
+.counter-section .count-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.counter-section .count {
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
