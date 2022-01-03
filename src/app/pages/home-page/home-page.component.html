@@ -20,25 +20,26 @@
   </div>
 
 
-  <div class="form-field" *ngFor="let item of weatherList" style="margin-top: 30px;">
-    <mat-card class="example-card">
-      <mat-card-subtitle>{{item.currentWeather.description}}</mat-card-subtitle>
-      <mat-card-title>{{item.name}} [{{item.sys.country}}]</mat-card-title>
-      <mat-card-content>
-        <img [src]="item.currentWeather.getIcon()" alt="icon">
-        <p style="font-size: 30px; font-weight: bold;">{{item.main.temp}}° C</p>
-        <p style="font-weight: 600;">Ciśnienie: {{item.main.pressure}}</p>
-      </mat-card-content>
-      <mat-divider inset></mat-divider>
-      <mat-card-actions>
-        <button mat-button>USUŃ</button>
-      </mat-card-actions>
-      <mat-card-footer>
-        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-      </mat-card-footer>
-    </mat-card>
+  <div>
+    <mat-grid-list [cols]="cols">
+      <mat-grid-tile *ngFor="let item of weatherList; index as i;" style="margin-top: 30px;">
+        <mat-card class="example-card" style="min-width: 250px;">
+          <mat-card-subtitle>{{item.currentWeather.description}}</mat-card-subtitle>
+          <mat-card-title>{{item.name}} [{{item.sys.country}}]</mat-card-title>
+          <mat-card-content>
+            <img [src]="item.currentWeather.getIcon()" alt="icon">
+            <p style="font-size: 30px; font-weight: bold;">{{item.main.temp}}° C</p>
+            <p style="font-weight: 600;">Ciśnienie: {{item.main.pressure}}</p>
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+            <button mat-button (click)="deleteWeather(i)">USUŃ</button>
+          </mat-card-actions>
+          <mat-card-footer>
+          </mat-card-footer>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
 
 </div>
-<!-- api.openweathermap.org/data/2.5/weather?q=London&appid=6890862a72fc7aabfe2222f2f2b1d4b0 -->
-
