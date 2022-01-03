@@ -1,5 +1,24 @@
+<div style="width: calc(100vw - 30px); border: 1px solid red; justify-content: center;">
 
+  <div class="form-field" style="text-align: center; border: 1px solid fuchsia; margin-top: 70px;">
+    <h1 style="border: 1px solid red; width: 100%;">Pogoda w mieście</h1>
+  </div>
 
+  <div class="form-field">
+    <mat-form-field style="width: 100%" appearance="fill">
+      <mat-label>Proszę wprowadzić miasto</mat-label>
+      <input matInput type="text" [(ngModel)]="textInput" (keyup.enter)="findWeather()">
+      <button *ngIf="textInput" matSuffix mat-icon-button aria-label="Clear" (click)="textInput=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
 
+  </div>
+
+  <div class="button-field" style="border: 1px solid yellow">
+    <button style="width: 100%;" mat-raised-button color="primary" (click)="findWeather()">Szukaj</button>
+  </div>
+
+</div>
 <!-- api.openweathermap.org/data/2.5/weather?q=London&appid=6890862a72fc7aabfe2222f2f2b1d4b0 -->
 

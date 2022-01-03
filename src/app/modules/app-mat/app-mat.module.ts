@@ -24,6 +24,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatMenuModule} from "@angular/material/menu";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import {MatMenuModule} from "@angular/material/menu";
     MatCardModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule
   ]
 })
 export class AppMatModule {

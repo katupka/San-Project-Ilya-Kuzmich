@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RestService} from "../../services/rest/rest.service";
 
 @Component({
@@ -8,10 +8,17 @@ import {RestService} from "../../services/rest/rest.service";
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private rest: RestService) { }
+  textInput = ''
+
+  constructor(private rest: RestService) {
+  }
 
   ngOnInit(): void {
-    this.rest.getWeather('Brest').subscribe(weather => {
+
+  }
+
+  findWeather() {
+    this.rest.getWeather(this.textInput).subscribe(weather => {
       console.log('jkrdjkjgrkjkdgjk')
       console.log(weather)
     })
